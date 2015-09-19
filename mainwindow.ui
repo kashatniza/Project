@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QGraphicsView" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>560</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSimulation">
+    <property name="title">
+     <string>Simulation</string>
+    </property>
+    <addaction name="actionPause"/>
+    <addaction name="separator"/>
+    <addaction name="actionAddCar"/>
+    <addaction name="actionRemoveCar"/>
+   </widget>
+   <addaction name="menuSimulation"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionPause"/>
+   <addaction name="actionAddCar"/>
+   <addaction name="actionRemoveCar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionPause">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/pause-button.png</normaloff>:/images/pause-button.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionAddCar">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/add-car.png</normaloff>:/images/add-car.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add car</string>
+   </property>
+   <property name="toolTip">
+    <string>Click on suitable location to add car</string>
+   </property>
+  </action>
+  <action name="actionRemoveCar">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/del-car.png</normaloff>:/images/del-car.png</iconset>
+   </property>
+   <property name="text">
+    <string>Remove car</string>
+   </property>
+   <property name="toolTip">
+    <string>Click on car at the map to remove</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
